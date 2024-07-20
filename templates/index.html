@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KODEV-BOT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+      .navbar {
+        background-color: #0049e6;
+      }
+      .navbar-brand, .navbar-nav .nav-item .nav-link {
+        color: #000000 !important;
+      }
+      .navbar-nav .nav-item .nav-link:hover {
+        color: #007bff !important;
+      }
+      .social-icon {
+        width: 24px;
+        height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">KODEV-BOT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Chat with us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/landing">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/kodevglobal/" target="_blank">
+              <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook" class="social-icon">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/KodevGlobal" target="_blank">
+              <img src="https://img.icons8.com/ios-filled/50/000000/twitter-circled.png" alt="Twitter" class="social-icon">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/company/kodev-global/posts/?feedView=all" target="_blank">
+              <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="mt-5">KODEV-BOT</h1>
+      <form method="post">
+        <!-- <div class="form-group">
+          <label for="context">Extracted PDF Content</label>
+          <textarea class="form-control" id="context" name="context" rows="10">{{ context }}</textarea>
+        </div> -->
+        <div class="form-group">
+          <label for="question">Please enter your question:</label>
+          <input type="text" class="form-control" id="question" name="question">
+        </div>
+        <button type="submit" class="btn btn-primary">Get Answer</button>
+      </form>
+      {% if chat_history %}
+        <h2 class="mt-5">Chat History</h2>
+        <ul class="list-group">
+          {% for q, a in chat_history %}
+            <li class="list-group-item"><strong>Question:</strong> {{ q }}<br><strong>Answer:</strong> {{ a }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+ 
+    <br>
+    <!-- footer -->
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
+
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #1c2331"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4"
+             style="background-color: #2e13c9"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">KodevGlobal</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #3000b4; height: 2px"
+                />
+            <p>
+              We specialize in digital technology, delivering innovative solutions to our clients.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Services</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="https://kodevglobal.com/#services" class="text-white">Implementation Services</a>
+            </p>
+            <p>
+              <a href="https://kodevglobal.com/#services" class="text-white">Resource Augmentation</a>
+            </p>
+            <p>
+              <a href="https://kodevglobal.com/#services" class="text-white">Project Management</a>
+            </p>
+            <p>
+              <a href="https://kodevglobal.com/#services" class="text-white">Financial Technologies, And Budgeting</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Information</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="https://kodevglobal.com/" class="text-white">Home</a>
+            </p>
+            <p>
+              <a href="https://kodevglobal.com/#services" class="text-white">Services</a>
+            </p>
+            <p>
+              <a href="https://kodevglobal.com/#services" class="text-white">Partners</a>
+            </p>
+            <p>
+              <a href="https://kodevglobal.com/aboutus" class="text-white">About us</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i>  USA Office: 2182 phelan rd pinon hills ca 92372</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@kodevglobal.com</p>
+            <!-- <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p> -->
+            <!-- <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p> -->
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2020 Copyright:
+      <a class="text-white" href="https://kodevglobal.com/"
+         >KodevGlobal</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+</div>
+<!-- End of .container -->
+    
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
